@@ -19,8 +19,5 @@
     "tailwindcss": "^3.0.24",
     "typescript": "^5.3.2"
   },
-  "homepage": "https://iqbal-codes.github.io/personal-website/",
-  "refine": {
-    "projectId": "KGKKj9-k8lwAv-hKkOD8"
-  }
+  "homepage": "https://iqbal-codes.github.io/personal-website/"
 }
