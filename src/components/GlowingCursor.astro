@@ -1,0 +1,15 @@
+---
+---
+
+<div id="cursor" class="fixed w-[600px] h-[600px] rounded-full pointer-events-none z-50 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/15 to-cyan-500/0 blur-3xl transition-transform duration-75 -translate-x-[300px] -translate-y-[300px]"></div>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  
+  document.addEventListener('mousemove', (e) => {
+    if (cursor) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    }
+  });
+</script>
