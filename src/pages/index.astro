@@ -3,99 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Segments from "../components/Segment.astro";
 import ExperienceSegment from "../components/ExperienceSegment.astro";
 import Sider from "../components/Sider.astro";
-
-const EXPERIENCES = [
-  {
-    workPeriode: "OCT 2022 - PRESENT",
-    title: "Frontend Engineer · eFishery",
-    description: [
-      `Build, design, and maintain multiple websites & mobile apps to achieve 100% digitalization of the company's.`,
-      `Implementing CodePush updates for React Native apps to enhance deployment effciency.`,
-      `Refactor existing codebases to improve apps performance and developer experiences.`,
-      `Work closely with cross-functional teams, including developers, managers, designers & products to design new features and resolve bugs.`,
-      `Optimized existing React applications for improved performance and user experience.`,
-    ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "Tailwind",
-      "React",
-      "NextJS",
-      "RefineJS",
-      "React Native",
-      "Unit Testing",
-      "Ant Design",
-      "Graphql",
-      "REST API",
-      "Zustand",
-    ],
-  },
-  {
-    workPeriode: "OCT 2020 - JUNE 2023",
-    title:
-      "Frontend Engineer > Lead Frontend Engineer · PT Pertamina Bina Medika IHC",
-    description: [
-      "Developed, Designed and maintained a high-quality user interface for a new product.",
-      "Crafted reusable React components for future use.",
-      "Took the initiative to prototype new user experiences and test them with stakeholders.",
-      "Initiate & Implemented new coding standards and best practices for the front-end team, resulting in improved effciency and a more consistent codebase across projects.",
-      "Optimized existing React applications for improved performance and user experience.",
-      "Work closely with clients to understand their needs and deliver solutions that meet their requirements.",
-    ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "Tailwind",
-      "React",
-      "NextJS",
-      "Ant Design",
-      "REST API",
-      "React Recoil",
-    ],
-  },
-  {
-    workPeriode: "APR 2019 - AUG 2022",
-    title: "Frontend Engineer · Virtual Spirit",
-    description: [
-      `Mainly focused on build & maintain high-quality web and mobile applications.`,
-      `Designed and implemented a user-friendly interface for the app.`,
-      `Optimized the app for performance and user experience.`,
-      `Collaborated with cross-functional teams to deliver high-quality mobile apps.`,
-    ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "React",
-      "React Native",
-      "REST API",
-      "React Redux",
-      "Redux Saga",
-    ],
-  },
-  {
-    workPeriode: "OCT 2018 - APR 2019",
-    title: "Frontend Engineer · Komers",
-    description: [
-      "Joined a very early-stage startup as a fresh graduate.",
-      "Built e-commerce apps from scratch using React Native and React.js in a team of three engineers.",
-      "Designed and implemented user interfaces without a dedicated UI/UX designer.",
-      "Delivered core features like product listings, carts, and payments while ensuring scalable and maintainable code.",
-    ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "React",
-      "React Native",
-      "REST API",
-      "React Redux",
-      "Redux Saga",
-    ],
-  },
-];
+import { experiences } from "../json/document.json";
 ---
 
 <Layout title="Home">
@@ -151,7 +59,7 @@ const EXPERIENCES = [
       <Segments title="EXPERIENCES">
         <div class="text-gray-400 mb-4 space-y-4">
           {
-            EXPERIENCES.map((experience: any) => (
+            experiences.map((experience: any) => (
               <ExperienceSegment
                 title={experience.title}
                 description={experience.description}
