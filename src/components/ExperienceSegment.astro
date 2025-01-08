@@ -6,17 +6,17 @@ const { title, description, workPeriode, technologies } = Astro.props;
   <div class="text-gray-500 text-xs mt-1 font-semibold">{workPeriode}</div>
   <div class="col-span-3 flex flex-col gap-4">
     <div class="text text-white">{title}</div>
-    <div>
+    <ul class="list-disc pl-4">
       {
         Array.isArray(description) ? (
           description.map((desc: string) => (
-            <li class="list-disc ml-2">{desc}</li>
+            <li>{desc}</li>
           ))
         ) : (
-          <p class="">{description}</p>
+          <li>{description}</li>
         )
       }
-    </div>
+    </ul>
     <div class="flex flex-wrap gap-2">
       {
         technologies.map((technology: string) => (
