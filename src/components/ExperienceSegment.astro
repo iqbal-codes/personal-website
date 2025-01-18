@@ -1,7 +1,5 @@
 ---
-import Technology from "./Technology.astro";
-
-const { title, description, workPeriode, technologies } = Astro.props;
+const { title, description, workPeriode } = Astro.props;
 ---
 
 <div class="card my-4 rounded-md grid grid-cols-4 gap-4">
@@ -17,12 +15,5 @@ const { title, description, workPeriode, technologies } = Astro.props;
         )
       }
     </ul>
-    <!-- <div class="flex flex-wrap gap-2">
-      {
-        technologies.map((technology: string) => (
-          <Technology technology={technology} />
-        ))
-      }
-    </div> -->
   </div>
 </div>
