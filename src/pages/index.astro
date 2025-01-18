@@ -1,23 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Segments from "../components/Segment.astro";
+import Segment from "../components/Segment.astro";
 import ExperienceSegment from "../components/ExperienceSegment.astro";
 import Sider from "../components/Sider.astro";
-import { experiences } from "../json/document.json";
+import { experiences, projects } from "../constants/global";
+import Header from "../components/Header.astro";
+import ProjectSegment from "../components/ProjectSegment.astro";
 ---
 
 <Layout title="Home">
   <div class="max-w-screen-xl mx-auto lg:px-8 flex flex-row">
     <Sider />
     <div class="flex-[3] pb-6">
-      <div class="mb-10 lg:hidden pt-12 px-8">
-        <h1 class="text-4xl sm:text-5xl font-bold mt-2">Muhammad Iqbal</h1>
-        <h2 class="text-lg sm:text-xl mt-3">Front-End Engineer</h2>
-        <h3 class="text-gray-400 mt-3 text-sm sm:text-base">
-          I build pixel-perfect, engaging, and<br /> accessible user experiences.
-        </h3>
-      </div>
-      <Segments title="ABOUT">
+      <Header />
+      <Segment title="ABOUT">
         <div class="text-gray-400 mb-4 space-y-4">
           <p>
             As a seasoned Frontend Engineer with 6+ years of experience, I
@@ -55,11 +51,11 @@ import { experiences } from "../json/document.json";
             business success.
           </p>
         </div>
-      </Segments>
-      <Segments title="EXPERIENCES">
+      </Segment>
+      <Segment title="EXPERIENCES">
         <div class="text-gray-400 mb-4 space-y-4">
           {
-            experiences.map((experience: any) => (
+            experiences.map((experience) => (
               <ExperienceSegment
                 title={experience.title}
                 description={experience.description}
@@ -70,7 +66,20 @@ import { experiences } from "../json/document.json";
             ))
           }
         </div>
-      </Segments>
+      </Segment>
+      <Segment title="PROJECTS">
+        <div class="text-gray-400 mb-4 space-y-4">
+          {
+            projects.map((project) => (
+              <ProjectSegment
+                name={project.name}
+                description={project.description}
+                technologies={project.technologies}
+              />
+            ))
+          }
+        </div>
+      </Segment>
     </div>
   </div>
 </Layout>

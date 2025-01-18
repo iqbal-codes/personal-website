@@ -1,4 +1,6 @@
 ---
+import Technology from "./Technology.astro";
+
 const { title, description, workPeriode, technologies } = Astro.props;
 ---
 
@@ -9,9 +11,7 @@ const { title, description, workPeriode, technologies } = Astro.props;
     <ul class="list-disc pl-4">
       {
         Array.isArray(description) ? (
-          description.map((desc: string) => (
-            <li>{desc}</li>
-          ))
+          description.map((desc: string) => <li>{desc}</li>)
         ) : (
           <li>{description}</li>
         )
@@ -20,11 +20,7 @@ const { title, description, workPeriode, technologies } = Astro.props;
     <div class="flex flex-wrap gap-2">
       {
         technologies.map((technology: string) => (
-          <div
-            class={`bg-opacity-15 rounded-full px-3 py-1 text-cyan-400 bg-cyan-500 text-sm`}
-          >
-            {technology}
-          </div>
+          <Technology technology={technology} />
         ))
       }
     </div>
