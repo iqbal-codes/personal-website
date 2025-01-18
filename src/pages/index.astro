@@ -60,8 +60,6 @@ import ProjectSegment from "../components/ProjectSegment.astro";
                 title={experience.title}
                 description={experience.description}
                 workPeriode={experience.workPeriode}
-                link="#"
-                technologies={experience.technologies}
               />
             ))
           }
@@ -75,6 +73,7 @@ import ProjectSegment from "../components/ProjectSegment.astro";
                 name={project.name}
                 description={project.description}
                 technologies={project.technologies}
+                link={project.link}
               />
             ))
           }

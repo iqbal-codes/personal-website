@@ -1,11 +1,13 @@
 ---
 import Technology from "./Technology.astro";
 
-const { name, description, technologies } = Astro.props;
+const { name, description, technologies, link = "#" } = Astro.props;
 ---
 
-<div class="my-6">
-  <h3 class="text-white text-lg font-semibold mb-2">{name}</h3>
+<div class="mb-6">
+  <div class="mb-2">
+    <a href={link} class={`text-white text-lg font-semibold ${link ? "underline" : ""}`}>{name}</a>
+  </div>
   <p class="mb-2">{description}</p>
   <div class="flex flex-wrap gap-2">
     {technologies.map((tech: string) => <Technology technology={tech} />)}

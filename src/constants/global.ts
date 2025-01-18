@@ -8,21 +8,7 @@ export const experiences = [
       "Refactor existing codebases to improve apps performance and developer experiences.",
       "Work closely with cross-functional teams, including developers, managers, designers & products to design new features and resolve bugs.",
       "Optimized existing React applications for improved performance and user experience.",
-    ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "Tailwind",
-      "React",
-      "NextJS",
-      "RefineJS",
-      "React Native",
-      "Jest",
-      "Ant Design",
-      "Graphql",
-      "REST API",
-      "Zustand",
+      "Initiate & Implement unit testing using Jest to improve code quality and reduce bugs.",
     ],
   },
   {
@@ -37,17 +23,6 @@ export const experiences = [
       "Optimized existing React applications for improved performance and user experience.",
       "Work closely with clients to understand their needs and deliver solutions that meet their requirements.",
     ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "Tailwind",
-      "React",
-      "NextJS",
-      "Ant Design",
-      "REST API",
-      "React Recoil",
-    ],
   },
   {
     workPeriode: "APR 2019 - AUG 2022",
@@ -57,16 +32,6 @@ export const experiences = [
       "Designed and implemented a user-friendly interface for the app.",
       "Optimized the app for performance and user experience.",
       "Collaborated with cross-functional teams to deliver high-quality mobile apps.",
-    ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "React",
-      "React Native",
-      "REST API",
-      "React Redux",
-      "Redux Saga",
     ],
   },
   {
@@ -78,20 +43,16 @@ export const experiences = [
       "Designed and implemented user interfaces without a dedicated UI/UX designer.",
       "Delivered core features like product listings, carts, and payments while ensuring scalable and maintainable code.",
     ],
-    technologies: [
-      "Javascript",
-      "Typescript",
-      "HTML & CSS",
-      "React",
-      "React Native",
-      "REST API",
-      "React Redux",
-      "Redux Saga",
-    ],
   },
 ];
 
 export const projects = [
+  {
+    name: "Personal Website",
+    description: "My personal website to showcase my projects and experiences.",
+    technologies: ["Typescript", "Tailwind", "Astro"],
+    link: "https://github.com/iqbal-codes/personal-website",
+  },
   {
     name: "Crowdver Tool, eFishery",
     description:
@@ -113,7 +74,6 @@ export const projects = [
       "Develop & maintain CRM Dashboard used by eFishery to manage all customer related data, such as customer profile, customer order, customer transaction, etc.",
     technologies: [
       "Typescript",
-      "CSS",
       "NextJS",
       "react-query",
       "code-push",
@@ -128,7 +88,6 @@ export const projects = [
       "Develop & maintain Sales Field Productivity Apps named Sales Diary used by Sales & Field Teams for all activities, such as supply management, order management, team reporting, etc.",
     technologies: [
       "Typescript",
-      "CSS",
       "React Native",
       "react-query",
       "code-push",
@@ -172,6 +131,7 @@ export const projects = [
     technologies: [
       "Javascript",
       "CSS",
+      "Styled Components",
       "React.Js",
       "react-query",
       "redux",
@@ -186,6 +146,7 @@ export const projects = [
     technologies: [
       "Typescript",
       "CSS",
+      "Styled Components",
       "Next.Js",
       "react-query",
       "recoil",
@@ -198,7 +159,7 @@ export const projects = [
       "Mobile communication apps named Circles.Md that had a mission to improve the working lives of health professionals and promote better patient care in hospitals.",
     technologies: [
       "Typescript",
-      "CSS",
+      "Styled Components",
       "Google API",
       "PubNub",
       "React Native",
@@ -211,7 +172,7 @@ export const projects = [
       "Mobile property apps named PropSocial to feature honest reviews direct from the community, with an easy-to-use interface that will help users find their ideal property within minutes.",
     technologies: [
       "Javascript",
-      "CSS",
+      "Styled Components",
       "MapBox API",
       "React Native",
       "redux saga",
@@ -223,7 +184,7 @@ export const projects = [
       "Develop from scratch mobile social media apps named Updated that focused on photos and videos sharing like Instagram.",
     technologies: [
       "Javascript",
-      "CSS",
+      "Styled Components",
       "Google API",
       "React Native",
       "Firebase",
@@ -236,7 +197,7 @@ export const projects = [
       "Develop & maintain mobile & Web team collaboration apps named VirtualSpace that mission to improve the working lives & communications of organizations, have features to discuss with teams, also have kanban task management to manage team tasks.",
     technologies: [
       "Javascript",
-      "CSS",
+      "Styled Components",
       "Google API",
       "React Js",
       "PubNub",
