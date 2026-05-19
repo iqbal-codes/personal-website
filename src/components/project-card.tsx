@@ -2,7 +2,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -17,7 +17,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
 
   return (
     <img
-      src={src}
+      src={withBasePath(src)}
       alt={alt}
       className="w-full h-48 object-cover"
       onError={() => setImageError(true)}
@@ -69,8 +69,8 @@ export function ProjectCard({
           className="block"
         >
           {video ? (
-            <video
-              src={video}
+              <video
+              src={withBasePath(video)}
               autoPlay
               loop
               muted

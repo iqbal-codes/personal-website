@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { withBasePath } from "@/lib/utils";
 
 interface MediaContainerProps {
   src: string;
@@ -17,13 +18,13 @@ export function MediaContainer({
     <div className={`ring-4 ring-muted w-full h-[300px] rounded-lg overflow-hidden flex items-center justify-center ${className}`}>
       {type === "image" ? (
         <img
-          src={src}
+          src={withBasePath(src)}
           alt={alt}
           className="w-full h-full object-cover object-center max-w-full max-h-full"
         />
       ) : (
         <video
-          src={src}
+          src={withBasePath(src)}
           className="w-full h-full object-cover object-center max-w-full max-h-full"
           controls
         />
@@ -31,4 +32,3 @@ export function MediaContainer({
     </div>
   );
 }
-

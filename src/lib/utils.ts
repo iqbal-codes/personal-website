@@ -15,3 +15,11 @@ export function formatDate(date: string | Date) {
     timeZone: "UTC",
   });
 }
+
+export function withBasePath(path?: string | null) {
+  if (!path) return "";
+  if (!path.startsWith("/")) return path;
+
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  return `${basePath}${path}`;
+}
